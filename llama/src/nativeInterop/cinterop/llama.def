@@ -1,0 +1,17 @@
+headers.ios = llama.h ggml.h ggml-alloc.h ggml-backend.h ggml-metal.h ggml-cpu.h ggml-blas.h gguf.h
+headers.osx = llama.h ggml.h ggml-alloc.h ggml-backend.h ggml-metal.h ggml-cpu.h ggml-blas.h gguf.h
+headers.android_arm64 = llama.h ggml.h ggml-alloc.h ggml-backend.h ggml-cpu.h gguf.h
+headers.linux_x64 = llama.h ggml.h ggml-alloc.h ggml-backend.h ggml-cpu.h gguf.h
+headers.mingw_x64 = llama.h ggml.h ggml-alloc.h ggml-backend.h ggml-cpu.h gguf.h
+
+package = llama
+
+# iOS linker options
+linkerOpts.ios = -lc++ -framework Accelerate -framework Metal -framework Foundation
+linkerOpts.osx = -lc++ -framework Accelerate -framework Metal -framework Foundation
+# for Android OpenMP need to add `-fopenmp`
+linkerOpts.android_arm64 = -lc++ -landroid -llog -latomic -lm -static-libgcc \
+                           -lllama -lggml -lggml-base -lggml-cpu -lggml-vulkan
+linkerOpts.linux_x64 = -lm -ldl \
+                       -lllama -lggml -lggml-base -lggml-cpu -lggml-vulkan
+linkerOpts.mingw_x64 = -lgomp -lllama -lggml -lggml-base -lggml-cpu -lggml-vulkan
