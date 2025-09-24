@@ -18,6 +18,7 @@ captures
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 iosApp/Configuration/Version.xcconfig
+iosApp/Configuration/Team.xcconfig
 output/
 composeApp/bin/**/
 *.dylib
