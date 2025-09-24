@@ -1,0 +1,203 @@
+<resources>
+    
+    <!-- Navigation -->
+    <string name="nav_chat">Chat</string>
+    <string name="nav_agent">Agente</string>
+    <string name="nav_settings">Configuración</string>
+    
+    <!-- Screen Titles -->
+    <string name="title_settings">Configuración</string>
+    <string name="title_agent_chat">Chat del Agente</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_agent_state">Datos del asistente</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_back">Atrás</string>
+    <string name="cd_settings">Configuración</string>
+    <string name="cd_select_model">Seleccionar Modelo</string>
+    <string name="cd_unload_model">Descargar Modelo</string>
+    <string name="cd_chat">Chat</string>
+    <string name="cd_agent">Agente</string>
+    <string name="cd_add_image">Añadir imagen</string>
+    <string name="cd_send">Enviar</string>
+    <string name="cd_stop">Detener</string>
+    <string name="cd_expand">Expandir</string>
+    <string name="cd_collapse">Contraer</string>
+    
+    <!-- Chat UI -->
+    <string name="chat_input_placeholder">Escribe tu mensaje...</string>
+    <string name="chat_agent_input_placeholder">Pregunta al agente...</string>
+    <string name="chat_assistant_label">🤖 Asistente</string>
+    <string name="chat_agent_label">🤖 Agente</string>
+    <string name="chat_user_label">👤 Tú</string>
+    <string name="chat_events_label">🧠 Eventos</string>
+    <string name="chat_context_used">contexto usado</string>
+    <string name="chat_message_copied">Mensaje copiado al portapapeles</string>
+    <string name="chat_generation_stopped">%1$s\n\n*[Generación detenida]*</string>
+    <string name="agent_input_awaiting_user">Responde al agente…</string>
+    <string name="chat_start_new">Iniciar nuevo chat</string>
+    
+    <!-- Model Selection Messages -->
+    <string name="model_select_hint">Para seleccionar un modelo haz clic en [icon1] de la barra de acciones superior o en el botón de abajo.\nLa GPU está deshabilitada por defecto, actívala en configuración [icon2].</string>
+    <string name="model_initializing">Inicializando modelo, por favor espera...</string>
+    <string name="model_selection">Selección de Modelo</string>
+    <string name="model_unload_current">Descargar %1$s</string>
+    
+    <!-- Model Download -->
+    <string name="download_cancel">Cancelar</string>
+    <string name="download_download">Descargar</string>
+    <string name="download_retry">Reintentar</string>
+    <string name="download_delete">Eliminar</string>
+    <string name="download_load">Cargar</string>
+    <string name="download_completed">¡Descarga completada! Puedes eliminar el modelo deslizando hacia la izquierda.</string>
+    <string name="download_failed">Descarga fallida. Por favor, inténtalo de nuevo.</string>
+    <string name="download_delete_confirm_title">Eliminar modelo</string>
+    <string name="download_delete_confirm_message">¿Eliminar el archivo descargado del almacenamiento? Esta acción no se puede deshacer.</string>
+    <string name="download_description">Descripción:</string>
+    
+    <!-- Settings -->
+    <string name="settings_save">Guardar</string>
+    <string name="settings_model_tab">Modelo</string>
+    <string name="settings_inference_tab">Inferencia</string>
+    <string name="settings_model_title">Configuración del modelo</string>
+    <string name="settings_model_subtitle">Estas configuraciones se aplican al recargar el modelo.</string>
+    <string name="settings_context_length">Longitud del contexto</string>
+    <string name="settings_context_length_desc">Elige el tamaño de la ventana de contexto del modelo.</string>
+    <string name="settings_use_gpu">Usar GPU</string>
+    <string name="settings_use_gpu_desc">Habilitar aceleración por GPU si la plataforma lo soporta.</string>
+    <string name="settings_gpu_unavailable">La GPU no está disponible en tu plataforma o el controlador no es compatible.</string>
+    <string name="settings_gpu_confirm_title">¿Habilitar aceleración por GPU?</string>
+    <string name="settings_gpu_confirm_message">Dependiendo de tu configuración de software y hardware, *cargar un modelo en GPU podría fallar o la aplicación podría fallar*. Si esto sucede, **por favor deshabilita la GPU en configuración**.</string>
+    <string name="settings_gpu_enable">Habilitar</string>
+    <string name="settings_gpu_cancel">Cancelar</string>
+    <string name="settings_inference_title">Configuración de inferencia</string>
+    <string name="settings_greedy">Codicioso</string>
+    <string name="settings_greedy_desc">Deshabilitar muestreo y elegir tokens de mayor probabilidad.</string>
+    <string name="settings_temperature">Temperatura: %1$s</string>
+    <string name="settings_temperature_desc">Controla la aleatoriedad. Más bajo = más determinista.</string>
+    <string name="settings_top_k">Top-K: %1$s</string>
+    <string name="settings_top_k_desc">Considerar solo los K tokens más probables.</string>
+    <string name="settings_top_p">Top-P: %1$s</string>
+    <string name="settings_top_p_desc">Umbral de muestreo de núcleo.</string>
+    <string name="settings_min_p">Min-P: %1$s</string>
+    <string name="settings_min_p_desc">Umbral mínimo de probabilidad de muestreo.</string>
+    <string name="settings_repeat_penalty">Penalización de repetición: %1$s (1.0 = deshabilitado)</string>
+    <string name="settings_repeat_penalty_desc">Desalentar la repetición de tokens.</string>
+    
+    <!-- About Section -->
+    <string name="about_title">Acerca de Llama Compose</string>
+    <string name="about_content">¡Bienvenido a Llama Compose! Esta es una aplicación de chat multiplataforma impulsada por modelos Llama y Gemma. Elige entre 📝 chat normal o 🔧 chat de agente con capacidades de llamada de herramientas. Selecciona y carga un modelo para comenzar.</string>
+    
+    <!-- Agent Features -->
+    <string name="show_agent_state">Ver Datos del Asistente</string>
+    <string name="back_to_agent">Volver al agente</string>
+    <string name="calendar_events">Eventos del calendario</string>
+    <string name="contacts">Contactos</string>
+    <string name="notes">Notas</string>
+    <string name="tasks">Tareas</string>
+    <string name="places">Lugares</string>
+    <string name="simple_chat_title">💬 Chat Simple</string>
+    <string name="simple_chat_content">Esta es una interfaz de chat simple para experimentar con modelos sin modificar.
+Puedes probar sus respuestas y rendimiento directamente sin procesamiento adicional.
+
+Usa cualquier modelo con etiqueta 📝 para capacidades de escritura.
+
+> Esta es una conversación directa con el modelo de IA tal como fue entrenado.
+> Perfecto para probar las capacidades del modelo y obtener respuestas directas.</string>
+    <string name="agent_title">🤖 Soy Llema, tu asistente personal</string>
+    <string name="agent_features_content">Características:
+
+📝 Notas: Buscar, leer y crear notas personales con etiquetas
+
+📅 Calendario: Listar eventos, encontrar disponibilidad y crear nuevos eventos
+
+✅ Tareas: Listar y completar tus tareas
+
+👥 Contactos: Buscar personas por nombre, email o teléfono
+
+📍 Lugares: Encontrar restaurantes, cafeterías y más cerca
+
+⏰ Tiempo: Obtener hora actual y calcular desplazamientos de fecha
+
+> Soy muy pequeña, podría no ser tan hábil como mis hermanos mayores, pero hago mi mejor esfuerzo.
+> A veces necesitas ser más específico sobre lo que debo hacer.
+> Usa modelos con etiqueta 🔧 para la mejor experiencia de agente.
+> Puedo comunicarme en español pero para mejores resultados usa **inglés**.</string>
+    
+    <!-- Error Messages -->
+    <string name="error_generation">Error: %1$s</string>
+    <string name="error_tool_call_failed">❌ Llamada de herramienta a %1$s falló, reintentando...</string>
+    <string name="error_handling">⚠️ Manejando error, por favor espera...</string>
+    
+    <!-- Agent Error Response Messages -->
+    <string name="error_response_format">Tuve problemas para entender el formato de respuesta. Por favor, intenta reformular tu solicitud.</string>
+    <string name="error_response_tool_unavailable">Intenté usar una herramienta que no está disponible. Déjame probar un enfoque diferente.</string>
+    <string name="error_response_processing">Encontré un problema al procesar tu solicitud. Por favor, inténtalo de nuevo.</string>
+    <string name="error_response_unknown">Error desconocido</string>
+    
+    <!-- Status Messages -->
+    <string name="status_tool_calling">🔧 Llamando herramienta: %1$s con parámetros: %2$s</string>
+    <string name="status_processing_results">📊 Procesando %1$s resultados de herramientas...</string>
+    <string name="status_analyzing">🤔 Analizando y formulando respuesta...</string>
+    
+    <!-- Desktop Window Title -->
+    <string name="desktop_window_title">Chat Llama Compose</string>
+    
+    <!-- Download Status Messages -->
+    <string name="download_status_cannot_resume">No se puede reanudar la descarga</string>
+    <string name="download_status_device_not_found">Dispositivo no encontrado</string>
+    <string name="download_status_file_already_exists">El archivo ya existe</string>
+    <string name="download_status_file_error">Error de archivo</string>
+    <string name="download_status_http_data_error">Error de datos HTTP</string>
+    <string name="download_status_insufficient_space">Espacio insuficiente</string>
+    <string name="download_status_network_error">Error de red</string>
+    <string name="download_status_network_timeout">Tiempo de espera de red agotado</string>
+    <string name="download_status_too_many_redirects">Demasiadas redirecciones</string>
+    <string name="download_status_unknown_error">Error desconocido</string>
+    
+    <!-- Animation Text -->
+    <string name="animation_loading">• ...</string>
+    <string name="animation_show_less">Mostrar menos...</string>
+    
+    <!-- Gauge Labels -->
+    <string name="gauge_percentage">%1$s%</string>
+    
+    <!-- Model Filter Tabs -->
+    <string name="filter_all">🧠\nTodos</string>
+    <string name="filter_desktop">🖥️\nEscritorio</string>
+    <string name="filter_mobile">📱\nMóvil</string>
+    <string name="filter_compact">📟\nMini</string>
+    
+    <!-- Model Filter Subtitles -->
+    <string name="filter_subtitle_all">Explora todos los modelos curados.</string>
+    <string name="filter_subtitle_desktop">Recomendado para escritorio - modelos más pesados no optimizados para móvil.</string>
+    <string name="filter_subtitle_mobile">Optimizado para ejecutarse en dispositivos móviles.</string>
+    <string name="filter_subtitle_compact">Modelos ultra-ligeros para máxima portabilidad y inicio más rápido.</string>
+    
+    <!-- Onboarding -->
+    <string name="onboard_welcome_title">Bienvenido a Llama Compose</string>
+    <string name="onboard_welcome_description">Aplicación de demostración para Colombia AI Week 2025\n\nImpulsado por las familias de modelos **Llama** y **Gemma** para conversaciones inteligentes y asistencia.</string>
+    <string name="onboard_models_title">Descargar y Configurar Modelos</string>
+    <string name="onboard_models_description">Puedes descargar y configurar modelos en la configuración respectiva para personalizar tu experiencia de IA.\n\nElige entre modelos 🖥️ de escritorio, 📱 móviles o 📟 compactos según las capacidades de tu plataforma.</string>
+    <string name="onboard_chat_title">Interfaz de Chat Simple</string>
+    <string name="onboard_chat_description">Puedes chatear con modelos sin modificar en chat simple para interacciones directas con IA.\n\nUsa cualquier modelo con capacidades de 📝 escritura.</string>
+    <string name="onboard_agent_title">Agente Asistente Personal</string>
+    <string name="onboard_agent_description">Puedes ejecutar tu propio agente asistente personal en chat de agente para capacidades avanzadas de IA.\n\nUsa solo modelos con capacidades de 🔧 herramientas.</string>
+    <string name="onboard_platform_title">Aprovecha el Poder de la Plataforma</string>
+    <string name="onboard_platform_description">Comienza a aprovechar el poder de tu ***%1$s*** habilitando la GPU en configuración para desbloquear todo el potencial de IA 🧠.</string>
+    <string name="onboard_back">Atrás</string>
+    <string name="onboard_skip">Omitir</string>
+    <string name="onboard_next">Siguiente</string>
+    <string name="onboard_start">Comenzar</string>
+    
+    <!-- Theme Options -->
+    <string name="theme_auto">Automático</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+    
+    <!-- Model Status -->
+    <string name="model_ready">%1$s listo</string>
+    <string name="model_queued">En cola</string>
+    <string name="download_completed_message">¡Descarga completada! Puedes eliminar el modelo presionando el botón de eliminar.</string>
+    <string name="download_failed_message">Descarga fallida. Por favor, inténtalo de nuevo.</string>
+</resources>

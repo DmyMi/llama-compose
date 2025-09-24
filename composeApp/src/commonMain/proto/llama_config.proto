@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option java_package = "cloud.dmytrominochkin.ai.llamacompose.proto";
+option java_multiple_files = true;
+
+enum Theme {
+  THEME_UNSPECIFIED = 0;
+
+  // Force to use light theme.
+  THEME_LIGHT = 1;
+
+  // Force to use dark theme.
+  THEME_DARK = 2;
+
+  // Use the system them setting on user's phone.
+  THEME_AUTO = 3;
+}
+
+// Generation configuration derived from Kotlin properties.
+// Defaults (for reference):
+// - temperature: 0.6
+// - top_k: 60
+// - top_p: 0.9
+// - repeat_penalty: 1.0 <- disabled
+// - seed: -1
+// - greedy: false
+message GenerationConfig {
+  float temperature = 1;
+  int32 top_k = 2;
+  float top_p = 3;
+  float repeat_penalty = 4;
+  int32 seed = 5;
+  bool greedy = 6;
+  float min_p = 7;
+}
+
+// Model configuration settings
+message ModelConfig {
+  int32 nctx = 1;
+  bool use_gpu = 2;
+}
+
+// Application-level configuration that includes model and generation settings
+message LlamaConfig {
+  ModelConfig model = 1;
+  GenerationConfig generation = 2;
+  Theme theme = 3;
+  bool is_on_boarding_completed = 4;
+}

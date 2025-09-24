@@ -1,0 +1,206 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Llama Compose</string>
+    
+    <!-- Navigation -->
+    <string name="nav_chat">Chat</string>
+    <string name="nav_agent">Agent</string>
+    <string name="nav_settings">Settings</string>
+    
+    <!-- Screen Titles -->
+    <string name="title_settings">Settings</string>
+    <string name="title_agent_chat">Agent Chat</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_agent_state">Assistant data</string>
+    <string name="title_llamacompose">Llama Compose</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_back">Back</string>
+    <string name="cd_settings">Settings</string>
+    <string name="cd_select_model">Select Model</string>
+    <string name="cd_unload_model">Unload Model</string>
+    <string name="cd_chat">Chat</string>
+    <string name="cd_agent">Agent</string>
+    <string name="cd_add_image">Add image</string>
+    <string name="cd_send">Send</string>
+    <string name="cd_stop">Stop</string>
+    <string name="cd_expand">Expand</string>
+    <string name="cd_collapse">Collapse</string>
+    
+    <!-- Chat UI -->
+    <string name="chat_input_placeholder">Type your message...</string>
+    <string name="chat_agent_input_placeholder">Ask the agent...</string>
+    <string name="chat_assistant_label">🤖 Assistant</string>
+    <string name="chat_agent_label">🤖 Agent</string>
+    <string name="chat_user_label">👤 You</string>
+    <string name="chat_events_label">🧠 Events</string>
+    <string name="chat_context_used">context used</string>
+    <string name="chat_message_copied">Message copied to clipboard</string>
+    <string name="chat_generation_stopped">%1$s\n\n*[Generation stopped]*</string>
+    <string name="agent_input_awaiting_user">Answer the agent…</string>
+    <string name="chat_start_new">Start new chat</string>
+    
+    <!-- Model Selection Messages -->
+    <string name="model_select_hint">To select a model click [icon1] in the top action bar or the button below.\nGPU is disabled by default, enable it in settings [icon2].</string>
+    <string name="model_initializing">Initializing model, please wait...</string>
+    <string name="model_selection">Model Selection</string>
+    <string name="model_unload_current">Unload %1$s</string>
+    
+    <!-- Model Download -->
+    <string name="download_cancel">Cancel</string>
+    <string name="download_download">Download</string>
+    <string name="download_retry">Retry</string>
+    <string name="download_delete">Delete</string>
+    <string name="download_load">Load</string>
+    <string name="download_completed">Download completed! You can delete the model by swiping left.</string>
+    <string name="download_failed">Download failed. Please try again.</string>
+    <string name="download_delete_confirm_title">Delete model</string>
+    <string name="download_delete_confirm_message">Remove the downloaded file from storage? This cannot be undone.</string>
+    <string name="download_description">Description:</string>
+    
+    <!-- Settings -->
+    <string name="settings_save">Save</string>
+    <string name="settings_model_tab">Model</string>
+    <string name="settings_inference_tab">Inference</string>
+    <string name="settings_model_title">Model settings</string>
+    <string name="settings_model_subtitle">These settings apply on model reload.</string>
+    <string name="settings_context_length">Context length</string>
+    <string name="settings_context_length_desc">Choose the model context window size.</string>
+    <string name="settings_use_gpu">Use GPU</string>
+    <string name="settings_use_gpu_desc">Enable GPU acceleration if the platform supports it.</string>
+    <string name="settings_gpu_unavailable">GPU is not available on your platform or driver is not supported.</string>
+    <string name="settings_gpu_confirm_title">Enable GPU acceleration?</string>
+    <string name="settings_gpu_confirm_message">Depending on your software and hardware configuration, *loading a model on GPU might fail or the application may crash*. If this happens, **please disable the GPU in settings**.</string>
+    <string name="settings_gpu_enable">Enable</string>
+    <string name="settings_gpu_cancel">Cancel</string>
+    <string name="settings_inference_title">Inference settings</string>
+    <string name="settings_greedy">Greedy</string>
+    <string name="settings_greedy_desc">Disable sampling and pick highest probability tokens.</string>
+    <string name="settings_temperature">Temperature: %1$s</string>
+    <string name="settings_temperature_desc">Controls randomness. Lower = more deterministic.</string>
+    <string name="settings_top_k">Top-K: %1$s</string>
+    <string name="settings_top_k_desc">Consider only top-K probable tokens.</string>
+    <string name="settings_top_p">Top-P: %1$s</string>
+    <string name="settings_top_p_desc">Nucleus sampling threshold.</string>
+    <string name="settings_min_p">Min-P: %1$s</string>
+    <string name="settings_min_p_desc">Minimum probability sampling threshold.</string>
+    <string name="settings_repeat_penalty">Repeat penalty: %1$s (1.0 = disabled)</string>
+    <string name="settings_repeat_penalty_desc">Discourage repeating tokens.</string>
+    
+    <!-- About Section -->
+    <string name="about_title">About Llama Compose</string>
+    <string name="about_content">Welcome to Llama Compose! This is a cross-platform chat application powered by Llama &amp; Gemma models. Choose between 📝 normal chat or 🔧 agent chat with tool calling capabilities. Select and load a model to get started.</string>
+    
+    <!-- Agent Features -->
+    <string name="show_agent_state">View Assistant Data</string>
+    <string name="back_to_agent">Back to agent</string>
+    <string name="calendar_events">Calendar events</string>
+    <string name="contacts">Contacts</string>
+    <string name="notes">Notes</string>
+    <string name="tasks">Tasks</string>
+    <string name="places">Places</string>
+    <string name="simple_chat_title">💬 Simple Chat</string>
+    <string name="simple_chat_content">This is a simple chat interface for experimenting with unmodified models.
+You can test their responses and performance directly without any additional processing.
+
+Use any model with 📝 tag for writing capabilities.
+
+> This is a direct conversation with the AI model as it was trained.
+> Perfect for testing model capabilities and getting raw responses.</string>
+    <string name="agent_title">🤖 I'm Llema, your personal assistant</string>
+    <string name="agent_features_content">Features:
+
+📝 Notes: Search, read, and create personal notes with tags
+
+📅 Calendar: List events, find availability, and create new events
+
+✅ Tasks: List and complete your tasks
+
+👥 Contacts: Look up people by name, email, or phone
+
+📍 Places: Find nearby restaurants, coffee shops, and more
+
+⏰ Time: Get current time and calculate date offsets
+
+> I am very small, I might not be as skilled as my bigger brothers, but I try my best.
+> Sometimes you need to be more specific on what I should do.
+> Use models with 🔧 tag for best agent experience.
+> I can communicate in multiple languages but for best results use **English**.</string>
+    
+    <!-- Error Messages -->
+    <string name="error_generation">Error: %1$s</string>
+    <string name="error_tool_call_failed">❌ Tool call to %1$s failed, retrying...</string>
+    <string name="error_handling">⚠️ Handling error, please wait...</string>
+    
+    <!-- Agent Error Response Messages -->
+    <string name="error_response_format">I had trouble understanding the response format. Please try rephrasing your request.</string>
+    <string name="error_response_tool_unavailable">I tried to use a tool that isn\'t available. Let me try a different approach.</string>
+    <string name="error_response_processing">I encountered an issue while processing your request. Please try again.</string>
+    <string name="error_response_unknown">Unknown error</string>
+    
+    <!-- Status Messages -->
+    <string name="status_tool_calling">🔧 Calling tool: %1$s with parameters: %2$s</string>
+    <string name="status_processing_results">📊 Processing %1$s tool results...</string>
+    <string name="status_analyzing">🤔 Analyzing and formulating response...</string>
+    
+    <!-- Desktop Window Title -->
+    <string name="desktop_window_title">Llama Compose Chat</string>
+    
+    <!-- Download Status Messages -->
+    <string name="download_status_cannot_resume">Cannot resume download</string>
+    <string name="download_status_device_not_found">Device not found</string>
+    <string name="download_status_file_already_exists">File already exists</string>
+    <string name="download_status_file_error">File error</string>
+    <string name="download_status_http_data_error">HTTP data error</string>
+    <string name="download_status_insufficient_space">Insufficient space</string>
+    <string name="download_status_network_error">Network error</string>
+    <string name="download_status_network_timeout">Network timeout</string>
+    <string name="download_status_too_many_redirects">Too many redirects</string>
+    <string name="download_status_unknown_error">Unknown error</string>
+    
+    <!-- Animation Text -->
+    <string name="animation_loading">• ...</string>
+    <string name="animation_show_less">Show less...</string>
+    
+    <!-- Gauge Labels -->
+    <string name="gauge_percentage">%1$s%</string>
+    
+    <!-- Model Filter Tabs -->
+    <string name="filter_all">🧠\nAll</string>
+    <string name="filter_desktop">🖥️\nDesktop</string>
+    <string name="filter_mobile">📱\nMobile</string>
+    <string name="filter_compact">📟\nMini</string>
+    
+    <!-- Model Filter Subtitles -->
+    <string name="filter_subtitle_all">Browse all curated models.</string>
+    <string name="filter_subtitle_desktop">Desktop recommended - heavier models not optimized for mobile.</string>
+    <string name="filter_subtitle_mobile">Optimized to run on mobile devices.</string>
+    <string name="filter_subtitle_compact">Ultra-light models for maximum portability and fastest startup.</string>
+    
+    <!-- Onboarding -->
+    <string name="onboard_welcome_title">Welcome to Llama Compose</string>
+    <string name="onboard_welcome_description">Showcase app for Colombia AI Week 2025\n\nPowered by **Llama** and **Gemma** model families for intelligent conversations and assistance.</string>
+    <string name="onboard_models_title">Download &amp; Configure Models</string>
+    <string name="onboard_models_description">You can download and configure models in respective settings to customize your AI experience.\n\nChoose from 🖥️ desktop, 📱 mobile, or 📟 compact models depending on your platform capabilities.</string>
+    <string name="onboard_chat_title">Simple Chat Interface</string>
+    <string name="onboard_chat_description">You can chat with unmodified models in simple chat for direct AI interactions.\n\nUse any model with 📝 writing capabilities.</string>
+    <string name="onboard_agent_title">Personal Assistant Agent</string>
+    <string name="onboard_agent_description">You can run your own personal assistant agent in agent chat for advanced AI capabilities.\n\nUse only models with 🔧 tool capabilities.</string>
+    <string name="onboard_platform_title">Harness Platform Power</string>
+    <string name="onboard_platform_description">Get started to harness the power of your ***%1$s*** by enabling GPU in settings to unlock full AI potential 🧠.</string>
+    <string name="onboard_back">Back</string>
+    <string name="onboard_skip">Skip</string>
+    <string name="onboard_next">Next</string>
+    <string name="onboard_start">Start</string>
+    
+    <!-- Theme Options -->
+    <string name="theme_auto">Auto</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    
+    <!-- Model Status -->
+    <string name="model_ready">%1$s ready</string>
+    <string name="model_queued">Queued</string>
+    <string name="download_completed_message">Download completed! You can delete the model by pressing delete button.</string>
+    <string name="download_failed_message">Download failed. Please try again.</string>
+</resources>

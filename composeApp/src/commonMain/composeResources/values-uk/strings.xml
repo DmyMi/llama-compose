@@ -1,0 +1,202 @@
+<resources>
+    <!-- Navigation -->
+    <string name="nav_chat">Чат</string>
+    <string name="nav_agent">Агент</string>
+    <string name="nav_settings">Налаштування</string>
+    
+    <!-- Screen Titles -->
+    <string name="title_settings">Налаштування</string>
+    <string name="title_agent_chat">Чат з агентом</string>
+    <string name="title_chat">Чат</string>
+    <string name="title_agent_state">Дані асистента</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_back">Назад</string>
+    <string name="cd_settings">Налаштування</string>
+    <string name="cd_select_model">Вибрати модель</string>
+    <string name="cd_unload_model">Вивантажити модель</string>
+    <string name="cd_chat">Чат</string>
+    <string name="cd_agent">Агент</string>
+    <string name="cd_add_image">Додати зображення</string>
+    <string name="cd_send">Надіслати</string>
+    <string name="cd_stop">Зупинити</string>
+    <string name="cd_expand">Розгорнути</string>
+    <string name="cd_collapse">Згорнути</string>
+    
+    <!-- Chat UI -->
+    <string name="chat_input_placeholder">Введіть ваше повідомлення...</string>
+    <string name="chat_agent_input_placeholder">Запитайте агента...</string>
+    <string name="chat_assistant_label">🤖 Асистент</string>
+    <string name="chat_agent_label">🤖 Агент</string>
+    <string name="chat_user_label">👤 Ви</string>
+    <string name="chat_events_label">🧠 Події</string>
+    <string name="chat_context_used">використано контексту</string>
+    <string name="chat_message_copied">Повідомлення скопійовано в буфер обміну</string>
+    <string name="chat_generation_stopped">%1$s\n\n*[Генерацію зупинено]*</string>
+    <string name="agent_input_awaiting_user">Відповісти агенту…</string>
+    <string name="chat_start_new">Почати новий чат</string>
+    
+    <!-- Model Selection Messages -->
+    <string name="model_select_hint">Щоб вибрати модель, натисніть на [icon1] у верхній панелі дій або кнопку знизу.\nGPU за замовчуванням вимкнено, увімкніть його в налаштуваннях [icon2].</string>
+    <string name="model_initializing">Ініціалізація моделі, будь ласка, зачекайте...</string>
+    <string name="model_selection">Вибір моделі</string>
+    <string name="model_unload_current">Вивантажити %1$s</string>
+    
+    <!-- Model Download -->
+    <string name="download_cancel">Скасувати</string>
+    <string name="download_download">Завантажити</string>
+    <string name="download_retry">Повторити</string>
+    <string name="download_delete">Видалити</string>
+    <string name="download_load">Вибрати</string>
+    <string name="download_completed">Завантаження завершено! Ви можете видалити модель, проведши пальцем вліво.</string>
+    <string name="download_failed">Завантаження не вдалося. Спробуйте ще раз.</string>
+    <string name="download_delete_confirm_title">Видалити модель</string>
+    <string name="download_delete_confirm_message">Видалити завантажений файл зі сховища? Цю дію неможливо скасувати.</string>
+    <string name="download_description">Опис:</string>
+    
+    <!-- Settings -->
+    <string name="settings_save">Зберегти</string>
+    <string name="settings_model_tab">Модель</string>
+    <string name="settings_inference_tab">Генерація</string>
+    <string name="settings_model_title">Налаштування моделі</string>
+    <string name="settings_model_subtitle">Ці налаштування застосовуються при перезавантаженні моделі.</string>
+    <string name="settings_context_length">Довжина контексту</string>
+    <string name="settings_context_length_desc">Виберіть розмір контекстного вікна моделі.</string>
+    <string name="settings_use_gpu">Використовувати GPU</string>
+    <string name="settings_use_gpu_desc">Увімкнути прискорення GPU, якщо платформа це підтримує.</string>
+    <string name="settings_gpu_unavailable">GPU недоступний на вашій платформі або драйвер не підтримується.</string>
+    <string name="settings_gpu_confirm_title">Увімкнути прискорення GPU?</string>
+    <string name="settings_gpu_confirm_message">Залежно від вашої програмної та апаратної конфігурації, *завантаження моделі на GPU може не вдатися або додаток може зламатися*. Якщо це станеться, **будь ласка, вимкніть GPU в налаштуваннях**.</string>
+    <string name="settings_gpu_enable">Увімкнути</string>
+    <string name="settings_gpu_cancel">Скасувати</string>
+    <string name="settings_inference_title">Налаштування генерації</string>
+    <string name="settings_greedy">Жадібний</string>
+    <string name="settings_greedy_desc">Вимкнути вибірку і вибирати токени з найвищою ймовірністю.</string>
+    <string name="settings_temperature">Температура: %1$s</string>
+    <string name="settings_temperature_desc">Контролює випадковість. Нижче = більш детерміновано.</string>
+    <string name="settings_top_k">Top-K: %1$s</string>
+    <string name="settings_top_k_desc">Розглядати лише топ-K найймовірніших токенів.</string>
+    <string name="settings_top_p">Top-P: %1$s</string>
+    <string name="settings_top_p_desc">Поріг вибірки ядра.</string>
+    <string name="settings_min_p">Min-P: %1$s</string>
+    <string name="settings_min_p_desc">Мінімальний поріг ймовірності вибірки.</string>
+    <string name="settings_repeat_penalty">Штраф за повторення: %1$s (1.0 = вимкнено)</string>
+    <string name="settings_repeat_penalty_desc">Зменшення повторення токенів.</string>
+    
+    <!-- About Section -->
+    <string name="about_title">Про Llama Compose</string>
+    <string name="about_content">Ласкаво просимо до Llama Compose! Це крос-платформний чат-додаток, що працює на моделях Llama &amp; Gemma. Оберіть між 📝 звичайним чатом або 🔧 чатом з агентом з можливостями виклику інструментів. Виберіть і завантажте модель, щоб почати.</string>
+    
+    <!-- Agent Features -->
+    <string name="show_agent_state">Переглянути дані асистента</string>
+    <string name="back_to_agent">Повернутися до агента</string>
+    <string name="calendar_events">Події календаря</string>
+    <string name="contacts">Контакти</string>
+    <string name="notes">Нотатки</string>
+    <string name="tasks">Завдання</string>
+    <string name="places">Місця</string>
+    <string name="simple_chat_title">💬 Простий Чат</string>
+    <string name="simple_chat_content">Це простий інтерфейс чату для експериментування з немодифікованими моделями.
+Ви можете тестувати їх відповіді та продуктивність безпосередньо без додаткової обробки.
+
+Використовуйте будь-яку модель з позначкою 📝 для можливостей написання.
+
+> Це пряма розмова з моделлю ШІ такою, якою вона була навчена.
+> Ідеально для тестування можливостей моделі та отримання прямих відповідей.</string>
+    <string name="agent_title">🤖 Я Ллема, твій персональний асистент</string>
+    <string name="agent_features_content">Можливості:
+
+📝 Нотатки: Шукати, читати та створювати особисті нотатки з тегами
+
+📅 Календар: Переглядати події, знаходити вільний час та створювати нові події
+
+✅ Завдання: Переглядати та виконувати ваші завдання
+
+👥 Контакти: Шукати людей за ім'ям, email або телефоном
+
+📍 Місця: Знаходити ресторани, кав'ярні та інше поруч
+
+⏰ Час: Отримувати поточний час та обчислювати зміщення дат
+
+> Я дуже маленька, можливо, не така вміла, як мої старші брати, але я намагаюся з усіх сил.
+> Іноді вам потрібно бути більш конкретними щодо того, що я повинна робити.
+> Використовуйте моделі з позначкою 🔧 для найкращого досвіду роботи з агентом.
+> Я можу спілкуватися українською, але для найкращих результатів використовуйте **англійську**.</string>
+    
+    <!-- Error Messages -->
+    <string name="error_generation">Помилка: %1$s</string>
+    <string name="error_tool_call_failed">❌ Виклик інструменту %1$s не вдався, повторюємо...</string>
+    <string name="error_handling">⚠️ Обробка помилки, будь ласка, зачекайте...</string>
+    
+    <!-- Agent Error Response Messages -->
+    <string name="error_response_format">У мене виникли проблеми з розумінням формату відповіді. Будь ласка, спробуйте переформулювати ваш запит.</string>
+    <string name="error_response_tool_unavailable">Я спробував використати інструмент, який недоступний. Дозвольте мені спробувати інший підхід.</string>
+    <string name="error_response_processing">У мене виникла проблема при обробці вашого запиту. Будь ласка, спробуйте ще раз.</string>
+    <string name="error_response_unknown">Невідома помилка</string>
+    
+    <!-- Status Messages -->
+    <string name="status_tool_calling">🔧 Виклик інструменту: %1$s з параметрами: %2$s</string>
+    <string name="status_processing_results">📊 Обробка результатів інструменту %1$s...</string>
+    <string name="status_analyzing">🤔 Аналіз та формулювання відповіді...</string>
+    
+    <!-- Desktop Window Title -->
+    <string name="desktop_window_title">Llama Compose Чат</string>
+    
+    <!-- Download Status Messages -->
+    <string name="download_status_cannot_resume">Неможливо відновити завантаження</string>
+    <string name="download_status_device_not_found">Пристрій не знайдено</string>
+    <string name="download_status_file_already_exists">Файл вже існує</string>
+    <string name="download_status_file_error">Помилка файлу</string>
+    <string name="download_status_http_data_error">Помилка HTTP даних</string>
+    <string name="download_status_insufficient_space">Недостатньо місця</string>
+    <string name="download_status_network_error">Помилка мережі</string>
+    <string name="download_status_network_timeout">Тайм-аут мережі</string>
+    <string name="download_status_too_many_redirects">Занадто багато перенаправлень</string>
+    <string name="download_status_unknown_error">Невідома помилка</string>
+    
+    <!-- Animation Text -->
+    <string name="animation_loading">• ...</string>
+    <string name="animation_show_less">Показати менше...</string>
+    
+    <!-- Gauge Labels -->
+    <string name="gauge_percentage">%1$s%</string>
+    
+    <!-- Model Filter Tabs -->
+    <string name="filter_all">🧠\nВсі</string>
+    <string name="filter_desktop">🖥️\nПК</string>
+    <string name="filter_mobile">📱\nМобілка</string>
+    <string name="filter_compact">📟\nМіні</string>
+    
+    <!-- Model Filter Subtitles -->
+    <string name="filter_subtitle_all">Переглянути всі доступні моделі.</string>
+    <string name="filter_subtitle_desktop">Рекомендовано для настільних ПК - важчі моделі, не оптимізовані для мобільних.</string>
+    <string name="filter_subtitle_mobile">Оптимізовано для роботи на мобільних пристроях.</string>
+    <string name="filter_subtitle_compact">Ультра-легкі моделі для максимальної портативності та найшвидшого запуску.</string>
+    
+    <!-- Onboarding -->
+    <string name="onboard_welcome_title">Ласкаво просимо до Llama Compose</string>
+    <string name="onboard_welcome_description">Демонстраційний додаток для Colombia AI Week 2025\n\nПрацює на сімействах моделей **Llama** та **Gemma** для розумних розмов та допомоги.</string>
+    <string name="onboard_models_title">Завантаження та Налаштування Моделей</string>
+    <string name="onboard_models_description">Ви можете завантажувати та налаштовувати моделі у відповідних налаштуваннях для персоналізації вашого досвіду ШІ.\n\nОберіть з 🖥️ настільних, 📱 мобільних або 📟 компактних моделей залежно від можливостей вашої платформи.</string>
+    <string name="onboard_chat_title">Простий Інтерфейс Чату</string>
+    <string name="onboard_chat_description">Ви можете спілкуватися з немодифікованими моделями в простому чаті для прямих взаємодій з ШІ.\n\nВикористовуйте будь-яку модель з можливостями 📝 написання.</string>
+    <string name="onboard_agent_title">Персональний Агент-Асистент</string>
+    <string name="onboard_agent_description">Ви можете запускати власного персонального агента-асистента в чаті агента для розширених можливостей ШІ.\n\nВикористовуйте лише моделі з можливостями 🔧 інструментів.</string>
+    <string name="onboard_platform_title">Використовуйте Потужність Платформи</string>
+    <string name="onboard_platform_description">Почніть використовувати потужність вашого ***%1$s***, увімкнувши GPU в налаштуваннях, щоб розблокувати повний потенціал ШІ 🧠.</string>
+    <string name="onboard_back">Назад</string>
+    <string name="onboard_skip">Пропустити</string>
+    <string name="onboard_next">Далі</string>
+    <string name="onboard_start">Почати</string>
+    
+    <!-- Theme Options -->
+    <string name="theme_auto">Автоматично</string>
+    <string name="theme_light">Світла</string>
+    <string name="theme_dark">Темна</string>
+    
+    <!-- Model Status -->
+    <string name="model_ready">%1$s готова</string>
+    <string name="model_queued">В черзі</string>
+    <string name="download_completed_message">Завантаження завершено! Ви можете видалити модель, натиснувши кнопку видалення.</string>
+    <string name="download_failed_message">Завантаження не вдалося. Спробуйте ще раз.</string>
+</resources>
