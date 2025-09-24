@@ -16,4 +16,11 @@ captures
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
-node_modules/
+
+iosApp/Configuration/Version.xcconfig
+output/
+composeApp/bin/**/
+*.dylib
+*.dll
+*.so
+*.gguf

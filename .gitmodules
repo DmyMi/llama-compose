@@ -1,0 +1,12 @@
+[submodule "llama/native/llama.cpp"]
+	path = llama/native/llama.cpp
+	url = https://github.com/ggml-org/llama.cpp.git
+[submodule "llama/native/OpenCL-Headers"]
+	path = llama/native/OpenCL-Headers
+	url = https://github.com/KhronosGroup/OpenCL-Headers
+[submodule "llama/native/OpenCL-ICD-Loader"]
+	path = llama/native/OpenCL-ICD-Loader
+	url = https://github.com/KhronosGroup/OpenCL-ICD-Loader
+[submodule "llama/native/Vulkan-Headers"]
+	path = llama/native/Vulkan-Headers
+	url = https://github.com/KhronosGroup/Vulkan-Headers
