@@ -1,4 +1,4 @@
-rootProject.name = "KotlinProject"
+rootProject.name = "LlamaCompose"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -32,4 +32,4 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
-include(":composeApp")
+include(":composeApp", ":llama")
