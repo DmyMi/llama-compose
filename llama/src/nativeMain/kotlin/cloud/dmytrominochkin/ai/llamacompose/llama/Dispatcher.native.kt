@@ -15,12 +15,12 @@
 */
 package cloud.dmytrominochkin.ai.llamacompose.llama
 
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.newSingleThreadContext
 import kotlinx.coroutines.CloseableCoroutineDispatcher
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.newSingleThreadContext
 import kotlin.coroutines.cancellation.CancellationException
 
 internal actual fun llamaDispatcher(): LlamaDispatcher = LlamaDispatcherNative()
