@@ -89,7 +89,8 @@ private fun getPlatformNameString(): String {
     return when (currentPlatform) {
         Platform.Android -> "Android"
         Platform.Windows, Platform.Linux, Platform.Other -> "Vulkan"
-        Platform.MacOS, Platform.IOS, Platform.Simuator -> "Apple Silicon"
+        Platform.MacOS, Platform.IOS, Platform.Simulator -> "Apple Silicon"
+        Platform.Web -> TODO("Need to implement for web platform")
     }
 }
 
@@ -161,9 +162,10 @@ fun OnboardingScreen(
             title = stringResource(Res.string.onboard_platform_title),
             description = stringResource(Res.string.onboard_platform_description, platformName),
             image = when (currentPlatform) {
-                Platform.MacOS, Platform.IOS, Platform.Simuator -> Res.drawable.onboard05_apple
+                Platform.MacOS, Platform.IOS, Platform.Simulator -> Res.drawable.onboard05_apple
                 Platform.Android -> Res.drawable.onboard05_android
                 Platform.Windows, Platform.Linux, Platform.Other -> Res.drawable.onboard05_vulkan
+                Platform.Web -> TODO("Need to implement for web platform")
             }
         )
     )

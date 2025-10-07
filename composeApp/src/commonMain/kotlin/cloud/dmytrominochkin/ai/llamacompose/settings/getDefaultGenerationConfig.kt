@@ -15,31 +15,10 @@
 */
 package cloud.dmytrominochkin.ai.llamacompose.settings
 
-import androidx.datastore.core.CorruptionException
-import androidx.datastore.core.okio.OkioSerializer
 import cloud.dmytrominochkin.ai.llamacompose.proto.GenerationConfig
 import cloud.dmytrominochkin.ai.llamacompose.proto.LlamaConfig
 import cloud.dmytrominochkin.ai.llamacompose.proto.ModelConfig
 import cloud.dmytrominochkin.ai.llamacompose.proto.Theme
-import okio.BufferedSink
-import okio.BufferedSource
-import okio.IOException
-
-object LlamaConfigSerializer : OkioSerializer<LlamaConfig> {
-    override val defaultValue: LlamaConfig
-        get() = getDefaultLlamaConfig()
-
-    override suspend fun readFrom(source: BufferedSource): LlamaConfig =
-        try {
-            LlamaConfig.ADAPTER.decode(source)
-        } catch (e: IOException) {
-            throw CorruptionException("Cannot read proto.", e)
-        } catch (e: IllegalStateException) {
-            throw CorruptionException("Cannot deserialize proto.", e)
-        }
-
-    override suspend fun writeTo(t: LlamaConfig, sink: BufferedSink) = t.encode(sink)
-}
 
 fun getDefaultGenerationConfig(): GenerationConfig = GenerationConfig(
     temperature = 0.6f,

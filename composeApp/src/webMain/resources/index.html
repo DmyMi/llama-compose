@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json"/>
+    <link rel="icon" type="image/x-icon" sizes="360x360" href="./images/AppIcon-360.png">
+
+    <title>Llama Compose</title>
+
+    <script type="text/javascript">
+        // TODO required for ktor client
+        window.process = {
+            env: {},
+            release: {}
+        };
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="ComposeApp"></div>
+<script type="application/javascript" src="composeApp.js"></script>
+</body>
+</html>

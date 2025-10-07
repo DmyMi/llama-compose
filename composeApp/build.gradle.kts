@@ -5,6 +5,7 @@ import cloud.dmytrominochkin.gradle.version.AppVersion
 import cloud.dmytrominochkin.gradle.BuildPlatform
 import cloud.dmytrominochkin.gradle.currentBuildPlatform
 import cloud.dmytrominochkin.gradle.version.tasks.XcodeVersionTask
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -37,15 +38,43 @@ kotlin {
         }
     }
 
+    js {
+        browser()
+        binaries.executable()
+    }
+
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs {
+        browser()
+        binaries.executable()
+    }
+
     jvm("desktop")
     jvmToolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
         vendor.set(JvmVendorSpec.JETBRAINS)
     }
 
+    @OptIn(ExperimentalKotlinGradlePluginApi::class)
+    applyDefaultHierarchyTemplate {
+        common {
+            group("nonWeb") {
+                withJvm()
+                withAndroidTarget()
+                withIos()
+            }
+        }
+    }
+
     sourceSets {
+        val webMain by getting
+        val nonWebMain by getting
         val desktopMain by getting
 
+        nonWebMain.dependencies {
+            implementation(libs.okio)
+            implementation(libs.datastore.core)
+        }
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
@@ -62,8 +91,6 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(libs.kotlinx.coroutines.core)
-            implementation(libs.okio)
-            implementation(libs.datastore.core)
             implementation(libs.androidx.navigation)
             implementation(libs.markdown.core)
             implementation(libs.markdown.m3)
@@ -87,6 +114,9 @@ kotlin {
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
+        }
+        webMain.dependencies {
+            implementation(libs.ktor.client.js)
         }
     }
 }

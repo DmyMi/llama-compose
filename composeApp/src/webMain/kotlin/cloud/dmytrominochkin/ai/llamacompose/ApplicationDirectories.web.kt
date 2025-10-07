@@ -13,16 +13,16 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-package cloud.dmytrominochkin.ai.llamacompose.settings
+package cloud.dmytrominochkin.ai.llamacompose
 
-import cloud.dmytrominochkin.ai.llamacompose.proto.LlamaConfig
-import kotlinx.coroutines.flow.Flow
+import okio.Path
 
-interface SettingsRepository {
-
-    val configFlow: Flow<LlamaConfig>
-
-    suspend fun update(transform: (LlamaConfig) -> LlamaConfig)
+actual fun getUserDataDir(
+    context: PlatformContext,
+    appName: String,
+    appVersion: String?,
+    appAuthor: String?,
+    roaming: Boolean
+): Path {
+    TODO("Need to implement for Web")
 }
-
-

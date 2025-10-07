@@ -22,6 +22,6 @@ import io.ktor.client.*
  *
  * Reason: Koog brings the CIO engine which becomes the default, but CIO is not
  * suitable for iOS (Kotlin/Native). We provide per-platform actuals to override
- * the engine: Darwin on iOS, OkHttp on Android/Desktop.
+ * the engine: Darwin on iOS, OkHttp on Android/Desktop, Js on Web.
  */
 expect fun getHttpClient(block: HttpClientConfig<*>.() -> Unit = {}): HttpClient

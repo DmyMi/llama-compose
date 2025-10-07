@@ -13,16 +13,26 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-package cloud.dmytrominochkin.ai.llamacompose.settings
+package cloud.dmytrominochkin.ai.llamacompose.theme
 
-import cloud.dmytrominochkin.ai.llamacompose.proto.LlamaConfig
-import kotlinx.coroutines.flow.Flow
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.Composable
 
-interface SettingsRepository {
+@Composable
+actual fun LlamaComposeTheme(
+    darkTheme: Boolean,
+    dynamicColor: Boolean,
+    content: @Composable (() -> Unit)
+) {
+    val userOverride = AppThemeConfig.userOverride
+    val colorScheme = when {
+        shouldGoDark(darkTheme, userOverride.value) -> darkScheme
+        else -> lightScheme
+    }
 
-    val configFlow: Flow<LlamaConfig>
-
-    suspend fun update(transform: (LlamaConfig) -> LlamaConfig)
+    MaterialTheme(
+        colorScheme = colorScheme,
+        typography = appTypography(),
+        content = content
+    )
 }
-
-

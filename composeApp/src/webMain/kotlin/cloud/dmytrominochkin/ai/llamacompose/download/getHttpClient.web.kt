@@ -13,16 +13,15 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-package cloud.dmytrominochkin.ai.llamacompose.settings
+package cloud.dmytrominochkin.ai.llamacompose.download
 
-import cloud.dmytrominochkin.ai.llamacompose.proto.LlamaConfig
-import kotlinx.coroutines.flow.Flow
+import io.ktor.client.HttpClient
+import io.ktor.client.engine.js.Js
+import io.ktor.client.HttpClientConfig
 
-interface SettingsRepository {
-
-    val configFlow: Flow<LlamaConfig>
-
-    suspend fun update(transform: (LlamaConfig) -> LlamaConfig)
-}
-
-
+/**
+ * Web actual for [getHttpClient].
+ *
+ * Uses Js explicitly to avoid picking up CIO provided by Koog.
+ */
+actual fun getHttpClient(block: HttpClientConfig<*>.() -> Unit): HttpClient = HttpClient(Js, block)

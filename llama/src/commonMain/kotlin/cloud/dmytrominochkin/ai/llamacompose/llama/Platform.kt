@@ -16,7 +16,7 @@
 package cloud.dmytrominochkin.ai.llamacompose.llama
 
 enum class Platform {
-    Android, Windows, Linux, MacOS, IOS, Simuator, Other
+    Android, Windows, Linux, MacOS, IOS, Simulator, Web, Other
 }
 
 expect val currentPlatform: Platform

@@ -52,9 +52,6 @@ fun KoinApp(content: @Composable () -> Unit) = KoinMultiplatformApplication(
                 // Model download
                 viewModel { ModelDownloadViewModel(get()) }
 
-                // Settings, can be transient as datastore is singleton
-                factory { SettingsRepository(get()) }
-
                 viewModel { StateViewModel() }
             }
         )

@@ -18,11 +18,15 @@ package cloud.dmytrominochkin.ai.llamacompose.di
 import cloud.dmytrominochkin.ai.llamacompose.PlatformContext
 import cloud.dmytrominochkin.ai.llamacompose.download.KtorModelRepository
 import cloud.dmytrominochkin.ai.llamacompose.download.ModelRepository
+import cloud.dmytrominochkin.ai.llamacompose.settings.DataStoreSettingsRepository
+import cloud.dmytrominochkin.ai.llamacompose.settings.SettingsRepository
 import cloud.dmytrominochkin.ai.llamacompose.settings.getDataStore
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
 actual val platformModule: Module = module {
     single { getDataStore(PlatformContext.INSTANCE) }
+    // Settings, can be transient as datastore is singleton
+    factory<SettingsRepository> { DataStoreSettingsRepository(get()) }
     single<ModelRepository> { KtorModelRepository(PlatformContext.INSTANCE) }
 }

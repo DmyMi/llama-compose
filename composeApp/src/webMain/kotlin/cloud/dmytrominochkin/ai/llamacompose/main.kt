@@ -13,16 +13,14 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-package cloud.dmytrominochkin.ai.llamacompose.settings
+package cloud.dmytrominochkin.ai.llamacompose
 
-import cloud.dmytrominochkin.ai.llamacompose.proto.LlamaConfig
-import kotlinx.coroutines.flow.Flow
+import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.compose.ui.window.ComposeViewport
 
-interface SettingsRepository {
-
-    val configFlow: Flow<LlamaConfig>
-
-    suspend fun update(transform: (LlamaConfig) -> LlamaConfig)
+@OptIn(ExperimentalComposeUiApi::class)
+fun main() {
+    ComposeViewport("ComposeApp") {
+        App()
+    }
 }
-
-

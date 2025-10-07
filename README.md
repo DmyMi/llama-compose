@@ -22,6 +22,7 @@ It is the topic of my talk on Colombia AI Week 2025.
   - [Run (Android)](#run-android)
   - [Run (iOS)](#run-ios)
   - [Run (Desktop)](#run-desktop)
+  - [Run (Web)](#run-web)
 - [Project Structure (single repo)](#project-structure-single-repo)
   - [Source Set Hierarchy (composeApp)](#source-set-hierarchy-composeapp)
   - [Source Set Hierarchy (llama)](#source-set-hierarchy-llama)
@@ -29,6 +30,7 @@ It is the topic of my talk on Colombia AI Week 2025.
   - [macOS](#macos)
   - [Windows (MinGW)](#windows-mingw)
   - [Linux](#linux)
+  - [Web](#web)
 - [Vulkan backend patch (optional)](#vulkan-backend-patch-optional)
 - [Attributions & Licenses](#attributions--licenses)
 
@@ -145,6 +147,11 @@ The task handles all native build dependencies internally, so you only need to r
 
 > [!IMPORTANT]
 > Building for different Desktop platforms requires additional setup, check [Platform Notes](#platform-notes) for details.
+
+### Run (Web)
+
+> [!CAUTION]
+> Web is added as preliminary experimental target, it is not runnable yet
 
 ## Project Structure (single repo)
 ```
@@ -274,6 +281,15 @@ sudo apt-get install -y vulkan-sdk mesa-vulkan-drivers
 
 > [!NOTE]
 > Vulkan is optional but recommended for GPU acceleration. CPU-only builds work without it.
+
+### Web
+
+> [!CAUTION]
+> Web is added as preliminary experimental target, it is not runnable yet
+
+```bash
+brew install emscripten
+```
 
 ## Vulkan backend patch (optional)
 

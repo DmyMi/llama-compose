@@ -15,4 +15,4 @@
 */
 package cloud.dmytrominochkin.ai.llamacompose.llama
 
-actual val currentPlatform: Platform = Platform.Simuator
+actual val currentPlatform: Platform = Platform.Simulator

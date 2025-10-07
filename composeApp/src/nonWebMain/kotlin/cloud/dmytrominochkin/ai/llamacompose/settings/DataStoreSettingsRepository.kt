@@ -15,14 +15,19 @@
 */
 package cloud.dmytrominochkin.ai.llamacompose.settings
 
+import androidx.datastore.core.DataStore
 import cloud.dmytrominochkin.ai.llamacompose.proto.LlamaConfig
 import kotlinx.coroutines.flow.Flow
 
-interface SettingsRepository {
+/**
+ * A small repository around Multiplatform Settings to persist and observe llama params.
+ * Uses JSON serialization to store the full struct under a single key.
+ */
+class DataStoreSettingsRepository(private val datastore: DataStore<LlamaConfig>) : SettingsRepository {
 
-    val configFlow: Flow<LlamaConfig>
+    override val configFlow: Flow<LlamaConfig> = datastore.data
 
-    suspend fun update(transform: (LlamaConfig) -> LlamaConfig)
+    override suspend fun update(transform: (LlamaConfig) -> LlamaConfig) {
+        datastore.updateData { transform(it) }
+    }
 }
-
-

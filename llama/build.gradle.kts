@@ -18,6 +18,7 @@ import cloud.dmytrominochkin.gradle.BuildPlatform
 import cloud.dmytrominochkin.gradle.currentBuildPlatform
 import org.jetbrains.compose.internal.utils.getLocalProperty
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 import org.jetbrains.kotlin.konan.target.Family
@@ -51,6 +52,13 @@ kotlin {
     iosSimulatorArm64()
     linuxX64()
     mingwX64()
+    js {
+        browser()
+    }
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs {
+        browser()
+    }
 
     jvm("desktop")
 
@@ -273,6 +281,12 @@ kotlin {
         val nativeMain by getting {
             dependencies {
                 // Native-specific dependencies if needed
+            }
+        }
+
+        val webMain by getting {
+            dependencies {
+                // Web-specific dependencies if needed
             }
         }
     }

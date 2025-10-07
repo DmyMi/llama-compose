@@ -13,16 +13,16 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-package cloud.dmytrominochkin.ai.llamacompose.settings
+package cloud.dmytrominochkin.ai.llamacompose
 
-import cloud.dmytrominochkin.ai.llamacompose.proto.LlamaConfig
-import kotlinx.coroutines.flow.Flow
-
-interface SettingsRepository {
-
-    val configFlow: Flow<LlamaConfig>
-
-    suspend fun update(transform: (LlamaConfig) -> LlamaConfig)
+/**
+ * Web actual for [PlatformContext].
+ *
+ * Web does not require a system context; a stateless singleton instance is
+ * exposed for API symmetry with other platforms.
+ */
+actual abstract class PlatformContext private constructor() {
+    companion object {
+        val INSTANCE = object : PlatformContext() {}
+    }
 }
-
-
