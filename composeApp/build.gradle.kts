@@ -107,25 +107,27 @@ android {
         setProperty("archivesBaseName", "$applicationId-v$versionName($versionCode)")
     }
 
+    val keystoreFile: String? = System.getenv("ANDROID_KEYSTORE_FILE")
+        ?: findProperty("ANDROID_KEYSTORE_FILE") as? String
     signingConfigs {
         getByName("debug") {
         }
 
         // TODO: check when Idea linter is not going crazy for using lambda instead of Action impl.
-        create("release", Action {
-            storeFile = file(
-                System.getenv("ANDROID_KEYSTORE_FILE")
-                    ?: findProperty("ANDROID_KEYSTORE_FILE") as? String ?: error("ANDROID_KEYSTORE_FILE not set")
-            )
-            storePassword = System.getenv("ANDROID_KEYSTORE_PASSWORD")
-                ?: findProperty("ANDROID_KEYSTORE_PASSWORD") as? String ?: error("ANDROID_KEYSTORE_PASSWORD not set")
-            keyAlias = System.getenv("ANDROID_KEYSTORE_ALIAS")
-                ?: findProperty("ANDROID_KEYSTORE_ALIAS") as? String ?: error("ANDROID_KEYSTORE_ALIAS not set")
-            keyPassword = System.getenv("ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD")
-                ?: findProperty("ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD") as? String
-                    ?: error("ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD not set")
-            enableV2Signing = true
-        })
+        if (!keystoreFile.isNullOrBlank()) {
+            create("release", Action {
+                storeFile = file(keystoreFile)
+                storePassword = System.getenv("ANDROID_KEYSTORE_PASSWORD")
+                    ?: findProperty("ANDROID_KEYSTORE_PASSWORD") as? String
+                keyAlias = System.getenv("ANDROID_KEYSTORE_ALIAS")
+                    ?: findProperty("ANDROID_KEYSTORE_ALIAS") as? String
+                keyPassword = System.getenv("ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD")
+                    ?: findProperty("ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD") as? String
+                enableV2Signing = true
+            })
+        } else {
+            println(">>> ANDROID_KEYSTORE_FILE environment variable / property not found. Release build will be unsigned. <<<")
+        }
     }
 
     packaging {
@@ -144,7 +146,9 @@ android {
             release {
                 isMinifyEnabled = false
                 isDebuggable = false
-                signingConfig = signingConfigs.getByName("release")
+                if (signingConfigs.findByName("release") != null) {
+                    signingConfig = signingConfigs.getByName("release")
+                }
                 resValue("string", "app_name", "Llama Compose")
                 proguardFiles(
                     getDefaultProguardFile("proguard-android-optimize.txt"),
