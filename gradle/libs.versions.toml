@@ -30,6 +30,8 @@ kottie = "2.1.0"
 logging = "7.0.13"
 slf4j = "2.0.17"
 logback = "1.5.18"
+conveyor-plugin = "1.12"
+conveyor-control = "1.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -64,6 +66,7 @@ kottie = { module = "io.github.ismai117:kottie", version.ref = "kottie" }
 logging = { module = "io.github.oshai:kotlin-logging", version.ref = "logging"}
 slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j"}
 logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback"}
+conveyor-control = { module = "dev.hydraulic.conveyor:conveyor-control", version.ref = "conveyor-control" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -74,6 +77,7 @@ composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "k
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 wire = { id = "com.squareup.wire", version.ref = "wire" }
+conveyor = { id = "dev.hydraulic.conveyor", version.ref = "conveyor-plugin" }
 
 [bundles]
 koin = ["koin-compose", "koin-vmnav"]
