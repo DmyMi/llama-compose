@@ -277,43 +277,7 @@ sudo apt-get install -y vulkan-sdk mesa-vulkan-drivers
 
 ## Vulkan backend patch (optional)
 
-Following patch needs to be applied for Vulkan if you plan to run on older devices:
-
-
-Need to change `GGML_ABORT` to error:
-```diff
---- a/ggml/src/ggml-vulkan/ggml-vulkan.cpp
-+++ b/ggml/src/ggml-vulkan/ggml-vulkan.cpp
-@@ -4449,7 +4449,8 @@ static void ggml_vk_instance_init() {
-   if (api_version < VK_API_VERSION_1_2) {
-       std::cerr << "ggml_vulkan: Error: Vulkan 1.2 required." << std::endl;
--        GGML_ABORT("fatal error");
-+        // Do not abort the whole process. Report initialization failure so the backend can be skipped.
-+        throw vk::SystemError(vk::Result::eErrorFeatureNotPresent, "Vulkan 1.2 required");
-   }
-```
-
-And optionally, handle other exceptions:
-
-```diff
---- a/ggml/src/ggml-vulkan/ggml-vulkan.cpp
-+++ b/ggml/src/ggml-vulkan/ggml-vulkan.cpp
-@@ -12717,7 +12717,14 @@ ggml_backend_reg_t ggml_backend_vk_reg() {
-   try {
-       ggml_vk_instance_init();
-       return &reg;
-   } catch (const vk::SystemError& e) {
-       VK_LOG_DEBUG("ggml_backend_vk_reg() -> Error: System error: " << e.what());
-       return nullptr;
-+    } catch (const std::exception &e) {
-+        VK_LOG_DEBUG("ggml_backend_vk_reg() -> Error: " << e.what());
-+        return nullptr;
-+    } catch (...) {
-+        VK_LOG_DEBUG("ggml_backend_vk_reg() -> Error: unknown exception during Vulkan init");
-+        return nullptr;
-   }
-}
-```
+As my [PR](https://github.com/ggml-org/llama.cpp/pull/16156) was accepted to llama.cpp, no patching is needed at the moment.
 
 ## Attributions & Licenses
 - This repository’s license: Apache 2.0
