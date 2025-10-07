@@ -40,13 +40,12 @@ It is the topic of my talk on Colombia AI Week 2025.
 
 ## Download 📦
 
-Llama Compose is available for iOS and macOS.
+Llama Compose is available for Apple, Android & Windows.
 
 <div align="center"><a href="https://apps.apple.com/ua/app/llama-compose/id6751783391"><img src="images/app_store_download.svg" width="200px"/></a></div>
 <!-- <div align="center"><a href="https://apps.apple.com/TODO"><img src="images//mac_store_download.svg" width="200px" /></a></div>
 <div align="center"> -->
-Google Play coming soon.
-<!-- <div align="center"><a href="https://play.google.com/store/apps/details?id=TODO"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="230px"/></a></div> -->
+<div align="center"><a href="https://play.google.com/store/apps/details?id=cloud.dmytrominochkin.ai.llamacompose"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="230px"/></a></div>
 
 Windows store coming soon.
 <!-- <a href="https://apps.microsoft.com/detail/TODO">
